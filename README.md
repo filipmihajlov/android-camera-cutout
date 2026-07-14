@@ -42,11 +42,7 @@ setContent {
 
 This configuration emits a filled copy of the detected cutout, moves it 300 px downward over 3000 ms, fades it after reaching the destination, and repeats indefinitely.
 
-## Demo
-
-<video src="docs/media/cutout-emission-demo.mp4" controls width="360"></video>
-
-[Watch the cutout emission demo](docs/media/cutout-emission-demo.mp4)
+![Cutout emission demo](docs/media/cutout-emission-demo.gif)
 
 ## Modules
 
