@@ -31,14 +31,22 @@ setContent {
         CameraCutoutDebugRoute(
             emissionConfig = CameraCutoutEmissionConfig(
                 enabled = true,
-                travelPx = 100f,
-                durationMillis = 900,
+                travelPx = 300f,
+                durationMillis = 3000,
                 repeatMode = CameraCutoutEmissionRepeatMode.Infinite,
             ),
         )
     }
 }
 ```
+
+This configuration emits a filled copy of the detected cutout, moves it 300 px downward over 3000 ms, fades it after reaching the destination, and repeats indefinitely.
+
+## Demo
+
+<video src="docs/media/cutout-emission-demo.mp4" controls width="360"></video>
+
+[Watch the cutout emission demo](docs/media/cutout-emission-demo.mp4)
 
 ## Modules
 
