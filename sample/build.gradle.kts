@@ -7,13 +7,13 @@ plugins {
 android {
     namespace = "com.filipmihajlov.camera.cutout.sample"
     compileSdk {
-        version = release(37)
+        version = release(36)
     }
 
     defaultConfig {
         applicationId = "com.filipmihajlov.camera.cutout.sample"
         minSdk = 31
-        targetSdk = 37
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
     }

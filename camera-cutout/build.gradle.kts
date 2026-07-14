@@ -7,7 +7,7 @@ plugins {
 android {
     namespace = "com.filipmihajlov.camera.cutout"
     compileSdk {
-        version = release(37)
+        version = release(36)
     }
 
     defaultConfig {
