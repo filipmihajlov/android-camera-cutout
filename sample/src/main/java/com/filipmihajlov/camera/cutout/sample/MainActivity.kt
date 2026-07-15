@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import com.filipmihajlov.camera.cutout.enableCameraCutoutLayout
 import com.filipmihajlov.camera.cutout.ui.CameraCutoutContentEmissionOverlay
 import com.filipmihajlov.camera.cutout.ui.CameraCutoutEmissionConfig
+import com.filipmihajlov.camera.cutout.ui.CameraCutoutEmissionMotion
 import com.filipmihajlov.camera.cutout.ui.CameraCutoutEmissionRepeatMode
 import com.filipmihajlov.camera.cutout.ui.debug.CameraCutoutDebugRoute
 
@@ -32,6 +33,7 @@ class MainActivity : ComponentActivity() {
                     travelPx = 300f,
                     durationMillis = 3000,
                     repeatMode = CameraCutoutEmissionRepeatMode.Infinite,
+                    motion = CameraCutoutEmissionMotion.InstaxPrint(),
                 )
 
                 Box(modifier = Modifier.fillMaxSize()) {

@@ -14,6 +14,7 @@ Early extraction from Momentarium. The API is usable, but may change before `1.0
 - Draws a configurable overlay around the camera cutout.
 - Optionally emits a filled copy of the cutout shape once or infinitely.
 - Emits app-provided Compose content from the detected cutout.
+- Supports a Fujifilm Instax-style print motion with a white developing wash.
 - Includes a debug route and sample app for quick device verification.
 
 ## Requirements
@@ -74,6 +75,31 @@ Box(modifier = Modifier.fillMaxSize()) {
 ```
 
 The library handles cutout detection, origin placement, travel timing, and fade timing. The app owns the content that appears to print from the notch.
+
+## Instax-Style Print
+
+Use `CameraCutoutEmissionMotion.InstaxPrint` when the content should appear to print out from just below the cutout, start almost white, develop into the final image, then disappear.
+
+```kotlin
+CameraCutoutContentEmissionOverlay(
+    modifier = Modifier.fillMaxSize(),
+    emissionConfig = CameraCutoutEmissionConfig(
+        enabled = true,
+        travelPx = 300f,
+        durationMillis = 3000,
+        fadeDurationMillis = 600,
+        repeatMode = CameraCutoutEmissionRepeatMode.Once,
+        motion = CameraCutoutEmissionMotion.InstaxPrint(
+            initialWashAlpha = 0.95f,
+            developDurationMillis = 900,
+            startScale = 0.92f,
+            endScale = 1f,
+        ),
+    ),
+) {
+    PrintedPhoto()
+}
+```
 
 ## Modules
 
